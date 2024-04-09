@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Hoves";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(./fonts/extraBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Hoves";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./fonts/demiBold.ttf) format("truetype");
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.text-gradient {
+  background: linear-gradient(0deg, #2e2342 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

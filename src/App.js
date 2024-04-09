@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useMemo } from "react";
+import { AppContext } from "./store";
+import { Order } from "./views/Order";
 
 function App() {
+  const [guests, setGuests] = useState(1);
+
+  const context = useMemo(() => ({ guests, setGuests }), [guests]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={context}>
+      <Order />
+    </AppContext.Provider>
   );
 }
 
