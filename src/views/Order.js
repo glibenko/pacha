@@ -1,6 +1,6 @@
 import React from "react";
-import { Counter } from "./Counter";
-import { Tower } from "./Tower";
+import { Counter } from "../components/Counter";
+import { Tower } from "../components/Tower";
 
 export const Order = () => {
   return (

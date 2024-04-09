@@ -1,5 +1,5 @@
 import React from "react";
-import { AppContext } from "./store";
+import { AppContext } from "../store";
 
 export const Counter = () => {
   const { guests, setGuests } = React.useContext(AppContext);

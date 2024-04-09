@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { AppContext } from "./store";
-import Glass from "./Glass";
+import { AppContext } from "../store";
+import {Glass} from "./Glass";
 
 const initialTower = [
   [false, false, false, false, false],
@@ -45,7 +45,7 @@ const m = {
   20: [4, 1],
 };
 
-const Tower = () => {
+export const Tower = () => {
   const prevGuests = useRef(0);
   const { guests } = React.useContext(AppContext);
   const [tow, setTow] = useState(initialTower);
@@ -83,7 +83,6 @@ const Tower = () => {
       if (guests === 9) {
         arr[0].splice(5, 1);
         arr[1].splice(4, 1);
-        console.log("arr", arr);
       } else {
         const currentMap = m[prevGuests.current];
         arr[currentMap[0]][currentMap[1]] = false;

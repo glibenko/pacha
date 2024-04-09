@@ -8,7 +8,7 @@ export const Glass = ({ first = false, hidden = true, small = true }) => {
         <img
           style={{ width: small ? 52 : 36 }}
           className={`absolute z-50 ${hidden ? "hidden" : ""}`}
-          src={require("./imgs/glass_2.png")}
+          src={require("../imgs/glass_2.png")}
           alt="guest"
         />
       </div>
@@ -23,7 +23,7 @@ export const Glass = ({ first = false, hidden = true, small = true }) => {
       <img
         style={{ width: small ? 72 : 49 }}
         className={`absolute ${hidden ? "hidden" : ""}`}
-        src={require("./imgs/glass_1.png")}
+        src={require("../imgs/glass_1.png")}
         alt="guest"
       />
     </div>
